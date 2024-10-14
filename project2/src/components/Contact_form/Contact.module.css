@@ -1,0 +1,57 @@
+.container{
+    margin: 0 auto;
+    display: flex;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.top_btn{
+    display: flex;
+    gap: 10px;
+}
+
+.contact_form form{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.formControl{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    padding: 0 10px;
+}
+
+.formControl label{
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    background-color: white  ;
+}
+
+.formControl input{
+    width: 440px;
+    height: 40px;
+    top: 10px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+}
+
+.formControl textarea{
+    width: 440px;
+    height: 120px;
+    top: 148px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+
+}

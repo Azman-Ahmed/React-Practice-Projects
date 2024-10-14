@@ -1,0 +1,17 @@
+
+.Navigation{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+  }
+.Navigation img{
+  width: 80px;
+  height: 80px;
+}
+.Navigation ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
