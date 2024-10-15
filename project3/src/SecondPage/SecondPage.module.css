@@ -1,0 +1,62 @@
+/*  */
+.counter {
+    max-width: 200px;
+    text-align: center;
+}
+
+.counter h1 {
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.counter p {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.Box{
+    height: 72px;
+    width: 72px;
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.Box {
+    height: 72px;
+    width: 72px;
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer; /* Shows pointer cursor to indicate it's clickable */
+    background-color: white; /* Default background color */
+    color: black; /* Default text color */
+}
+
+.selected {
+    background-color: black; /* Background changes when selected */
+    color: white; /* Text color changes when selected */
+}
+
+.boxs{
+    display: flex;
+    align-items: end;
+}
+
+.boxs .flex {
+    display: flex;
+    gap: 24px;
+}
+.boxs p {
+    font-size: 24px;
+    font-weight: 700px;
+}
+.boxs .error {
+    color: red;
+}
