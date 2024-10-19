@@ -22,3 +22,16 @@ return (
 ```
 
 ## Method 2: (new One)
+
+This method creates a BrowserRouter and store it in an object outside return scope.
+
+```bash
+const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path='/' element={<One/>}/>
+        <Route path='/about' element={<Onet />} />
+      </Route>
+    )
+);
+```

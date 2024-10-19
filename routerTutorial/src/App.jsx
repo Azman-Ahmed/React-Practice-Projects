@@ -1,24 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom'
-import One from './One/One'
-import Onet from './One/Onet'
+import './App.css';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
+import One from './One/One';  // Ensure the correct case is used for import
+import Onet from './One/Onet'; // Ensure the correct case is used for import
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path='/' element={<One/>}/>
+        <Route path='/about' element={<Onet />} />
+      </Route>
+    )
+  );
+  
   return (
-    <BrowserRouter>
-      <NavLink to="/about">Areh</NavLink>
-      <NavLink to="/">Ohho</NavLink>
-      <main>
-          <Routes>
-          <Route path='/' element={<One/>}/>
-            <Route path='/about' element={<Onet/>}/>
-          </Routes>
-      </main>
-    </BrowserRouter>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;
