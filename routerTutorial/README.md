@@ -7,7 +7,8 @@ npm install react-router-dom@6.4
 Here The BrowserRouter is used inside the render scope.
 
 ```bash
-<BrowserRouter>
+return (
+    <BrowserRouter>
       <NavLink to="/about">Areh</NavLink>
       <NavLink to="/">Ohho</NavLink>
       <main>
@@ -16,7 +17,8 @@ Here The BrowserRouter is used inside the render scope.
             <Route path='/about' element={<Onet/>}/>
           </Routes>
       </main>
-</BrowserRouter>
+    </BrowserRouter>
+  )
 ```
 
 ## Method 2: (new One)
