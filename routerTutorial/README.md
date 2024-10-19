@@ -34,4 +34,19 @@ const router = createBrowserRouter(
       </Route>
     )
 );
+  
+return (
+    <RouterProvider router={router} />
+);
+```
+
+```bash
+<h1>About</h1>
+<div>
+    <NavLink to='/'>Home</NavLink> 
+    <NavLink to='/about'>About</NavLink>
+</div>
+<main>
+    <Outlet /> {/* This will render any nested routes */}
+</main>
 ```

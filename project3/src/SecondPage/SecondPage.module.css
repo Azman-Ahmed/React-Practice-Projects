@@ -1,62 +1,57 @@
-/*  */
+
 .counter {
-    max-width: 200px;
-    text-align: center;
-}
-
-.counter h1 {
-    font-size: 100px;
-    line-height: 100px;
-}
-
-.counter p {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-
-.Box{
-    height: 72px;
-    width: 72px;
-    border: 1px solid black;
-    display: grid;
-    place-items: center;
-    font-size: 24px;
-    font-weight: 700;
-
-}
-
-.Box {
-    height: 72px;
-    width: 72px;
-    border: 1px solid black;
-    display: grid;
-    place-items: center;
-    font-size: 24px;
-    font-weight: 700;
-    cursor: pointer; /* Shows pointer cursor to indicate it's clickable */
-    background-color: white; /* Default background color */
-    color: black; /* Default text color */
-}
-
-.selected {
-    background-color: black; /* Background changes when selected */
-    color: white; /* Text color changes when selected */
-}
-
-.boxs{
     display: flex;
-    align-items: end;
-}
-
-.boxs .flex {
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0f7fa; 
+    padding: 5px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    margin: 15px 0; 
+  }
+  
+  .counter h1 {
+    font-size: 3rem; 
+    color: #00796b; 
+    margin: 0;
+  }
+  
+  .counter p {
+    font-size: 1.2rem; 
+    color: #004d40; 
+    margin-top: 5px; 
+  }
+  
+  .boxs {
     display: flex;
-    gap: 24px;
-}
-.boxs p {
-    font-size: 24px;
-    font-weight: 700px;
-}
-.boxs .error {
-    color: red;
-}
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-top: 15px; 
+  }
+  
+  .Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px;
+    background-color: #ffffff; 
+    border: 2px solid #00796b; 
+    border-radius: 8px; 
+    margin: 5px;
+    cursor: pointer; 
+    font-size: 1.5rem; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .selected {
+    background-color: #00796b;
+    color: white; 
+    transform: scale(1.1); 
+  }
+  
+  .Box:hover {
+    background-color: #b2dfdb; 
+  }
+  
