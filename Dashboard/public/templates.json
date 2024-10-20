@@ -1,0 +1,27 @@
+[
+    {
+      "ID": "1",
+      "name": "Blog Ideas & Outlines",
+      "description": "Brainstorm new ideas...",
+      "creator": "Agatha Williams",
+      "creatorType": "Admin",
+      "status": "Active"
+    },
+    {
+      "ID": "2",
+      "name": "Blog Post Writing",
+      "description": "Write engaging blog posts...",
+      "creator": "Agatha Williams",
+      "creatorType": "Admin",
+      "status": "Active"
+    },
+    {
+        "ID": "3",
+        "name": "Blog Post Writing",
+        "description": "Write engaging blog posts...",
+        "creator": "Agatha Williams",
+        "creatorType": "Admin",
+        "status": "Active"
+    }
+  ]
+  
