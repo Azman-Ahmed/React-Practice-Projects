@@ -23,6 +23,11 @@ return (
 
 ## Method 2: (new One)
 
+import this in the app.jsx
+```bash
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
+```
+
 This method creates a BrowserRouter and store it in an object outside return scope.
 
 ```bash
