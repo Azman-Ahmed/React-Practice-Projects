@@ -12,21 +12,33 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    const abortController = new AbortController(); // Create an AbortController
+    const { signal } = abortController; // Get the signal from the controller
+
     const fetchData = async () => {
       try {
-        const response = await fetch('/templates.json');
+        const response = await fetch('/templates.json', { signal }); // Pass the signal to fetch
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const fetchedData = await response.json();
         setData(fetchedData);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        if (error.name === 'AbortError') {
+          console.log('Fetch aborted'); // Handle fetch abort
+        } else {
+          console.error('Error fetching data:', error);
+        }
       }
     };
 
     fetchData();
-  }, []);
+
+    // Cleanup function to abort the fetch request when the component unmounts
+    return () => {
+      abortController.abort(); // Abort the fetch request
+    };
+  }, []); // Empty array means this runs only on mount and unmount
 
   const updateTemplate = (updatedTemplate) => {
     setData((prevData) =>
@@ -51,7 +63,7 @@ function App() {
         <Route path="/" element={<TemplatesTable data={data} deleteTemplate={deleteTemplate} />} />
         <Route path="/view" element={<ViewTemplate />} />
         <Route path="/edit" element={<Edit updateTemplate={updateTemplate} />} />
-        <Route path="/create" element={<Create addTemplate={addTemplate} />} />  {/* Pass addTemplate here */}
+        <Route path="/create" element={<Create addTemplate={addTemplate} />} />
       </>
     )
   );

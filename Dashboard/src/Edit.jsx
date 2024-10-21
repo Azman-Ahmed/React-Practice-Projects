@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link,useLocation, useNavigate } from 'react-router-dom';
+
 
 const Edit = ({ updateTemplate }) => {
   const location = useLocation();
@@ -30,7 +31,7 @@ const Edit = ({ updateTemplate }) => {
   return (
     <div>
       <h2>Edit Template</h2>
-      <form onSubmit={handleSubmit}> 
+      <form className='form-container' onSubmit={handleSubmit}> 
         <label>
           Name:
           <input type="text" name="name" value={formData.name} onChange={handleChange} />
@@ -52,6 +53,9 @@ const Edit = ({ updateTemplate }) => {
           <input type="text" name="status" value={formData.status} onChange={handleChange} />
         </label>
         <button type="submit">Submit</button> 
+        <Link to={'/'}>
+            <button>Back to Home</button>
+        </Link>
       </form>
     </div>
   );

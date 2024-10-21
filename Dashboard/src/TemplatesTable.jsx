@@ -22,7 +22,7 @@ const TemplatesTable = ({ data, deleteTemplate }) => {
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='dashboard' >
           {data.map(({ ID, name, description, creator, creatorType, status }, index) => (
             <tr key={ID}>
               {/* <td>{ID}</td> */}
@@ -33,7 +33,7 @@ const TemplatesTable = ({ data, deleteTemplate }) => {
               <td><span className="status">{status}</span></td>
               <td>
                 <Link to={'/view'} state={{ ID, name, description, creator, creatorType }}>
-                  <button className='btn btn-success'>View</button>
+                  <button>View</button>
                 </Link>
                 <Link to={'/edit'} state={{ ID, name, description, creator, creatorType, status }}>
                   <button>Edit</button>

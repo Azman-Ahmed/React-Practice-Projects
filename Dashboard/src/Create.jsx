@@ -1,5 +1,8 @@
+import './App.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
 
 const Create = ({ addTemplate }) => {
   const navigate = useNavigate();
@@ -28,7 +31,7 @@ const Create = ({ addTemplate }) => {
   return (
     <div>
         <h2>Create New Template</h2>
-        <form onSubmit={handleSubmit}>
+        <form className='form-container' onSubmit={handleSubmit}>
             <label>
             Name:
             <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -50,7 +53,11 @@ const Create = ({ addTemplate }) => {
             <input type="text" name="status" value={formData.status} onChange={handleChange} required />
             </label>
             <button type="submit">Create</button>
+            <Link to={'/'}>
+                <button>Back to Home</button>
+            </Link>
         </form>
+        
     </div>
 
   );
