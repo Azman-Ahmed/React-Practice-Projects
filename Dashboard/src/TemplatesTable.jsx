@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TemplatesTable = ({ data, deleteTemplate }) => {  
+const TemplatesTable = ({ data, deleteTemplate }) => {
   return (
     <div className="templates-table">
-      <button>Create New</button>
+      <div className="button-container">
+        <Link to="/create">
+          <button className="create-button">Create New</button>  
+        </Link>
+      </div>
       
       <table>
         <thead>
           <tr>
-            <th>ID</th>
+            {/* <th>ID</th> */}
             <th>Name</th>
             <th>Description</th>
             <th>Creator</th>
@@ -21,7 +25,7 @@ const TemplatesTable = ({ data, deleteTemplate }) => {
         <tbody>
           {data.map(({ ID, name, description, creator, creatorType, status }, index) => (
             <tr key={ID}>
-              <td>{ID}</td>
+              {/* <td>{ID}</td> */}
               <td>{name}</td>
               <td>{description}</td>
               <td>{creator}</td>
@@ -35,7 +39,6 @@ const TemplatesTable = ({ data, deleteTemplate }) => {
                   <button>Edit</button>
                 </Link>
                 <button onClick={() => deleteTemplate(ID)}>Delete</button>
-
               </td>
             </tr>
           ))}

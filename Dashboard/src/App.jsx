@@ -6,6 +6,7 @@ import TemplatesTable from './TemplatesTable';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
 import ViewTemplate from './ViewTemplate';
 import Edit from './Edit';
+import Create from './Create';
 
 function App() {
   const [data, setData] = useState([]);
@@ -35,20 +36,22 @@ function App() {
     );
   };
 
-  const remove = {
-
-  }
-
   const deleteTemplate = (idToDelete) => {
     setData((prevData) => prevData.filter((template) => template.ID !== idToDelete));
   };
 
+  const addTemplate = (newTemplate) => {
+    setData((prevData) => [...prevData, newTemplate]);
+  };
+
+  // Router setup
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" element={<TemplatesTable data={data} deleteTemplate={deleteTemplate}/>} />
+        <Route path="/" element={<TemplatesTable data={data} deleteTemplate={deleteTemplate} />} />
         <Route path="/view" element={<ViewTemplate />} />
         <Route path="/edit" element={<Edit updateTemplate={updateTemplate} />} />
+        <Route path="/create" element={<Create addTemplate={addTemplate} />} />  {/* Pass addTemplate here */}
       </>
     )
   );
