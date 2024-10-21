@@ -1,27 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const TemplatesTable = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/templates.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setData(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+const TemplatesTable = ({ data, deleteTemplate }) => {  
   return (
     <div className="templates-table">
+      <button>Create New</button>
+      
       <table>
         <thead>
           <tr>
@@ -35,21 +19,26 @@ const TemplatesTable = () => {
           </tr>
         </thead>
         <tbody>
-            {data.map(({ID, name, description, creator, creatorType, status}, index) => (
-                <tr key={ID}>
-                    <td>{ID}</td>
-                    <td>{name}</td>
-                    <td>{description}</td>
-                    <td>{creator}</td>
-                    <td>{creatorType}</td>
-                    <td><span className="status">{status}</span></td>
-                    <td>
-                        <button>View</button>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-            ))}
+          {data.map(({ ID, name, description, creator, creatorType, status }, index) => (
+            <tr key={ID}>
+              <td>{ID}</td>
+              <td>{name}</td>
+              <td>{description}</td>
+              <td>{creator}</td>
+              <td>{creatorType}</td>
+              <td><span className="status">{status}</span></td>
+              <td>
+                <Link to={'/view'} state={{ ID, name, description, creator, creatorType }}>
+                  <button className='btn btn-success'>View</button>
+                </Link>
+                <Link to={'/edit'} state={{ ID, name, description, creator, creatorType, status }}>
+                  <button>Edit</button>
+                </Link>
+                <button onClick={() => deleteTemplate(ID)}>Delete</button>
+
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

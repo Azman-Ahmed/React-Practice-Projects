@@ -1,27 +1,66 @@
 [
-    {
-      "ID": "1",
-      "name": "Blog Ideas & Outlines",
-      "description": "Brainstorm new ideas...",
-      "creator": "Agatha Williams",
-      "creatorType": "Admin",
-      "status": "Active"
-    },
-    {
-      "ID": "2",
-      "name": "Blog Post Writing",
-      "description": "Write engaging blog posts...",
-      "creator": "Agatha Williams",
-      "creatorType": "Admin",
-      "status": "Active"
-    },
-    {
-        "ID": "3",
-        "name": "Blog Post Writing",
-        "description": "Write engaging blog posts...",
-        "creator": "Agatha Williams",
-        "creatorType": "Admin",
-        "status": "Active"
-    }
-  ]
-  
+  {
+    "ID": "1",
+    "name": "Blog Ideas & Outlines",
+    "description": "Brainstorm new ideas and generate creative outlines for your blog posts.",
+    "creator": "Agatha Williams",
+    "creatorType": "Admin",
+    "status": "Active"
+  },
+  {
+    "ID": "2",
+    "name": "Blog Post Writing",
+    "description": "Write engaging blog posts that captivate your audience.",
+    "creator": "Agatha Williams",
+    "creatorType": "Admin",
+    "status": "Active"
+  },
+  {
+    "ID": "3",
+    "name": "Social Media Calendar",
+    "description": "Plan your social media content and keep your audience engaged.",
+    "creator": "Mark Johnson",
+    "creatorType": "User",
+    "status": "Draft"
+  },
+  {
+    "ID": "4",
+    "name": "Email Marketing Campaign",
+    "description": "Create an effective email marketing campaign to increase your reach.",
+    "creator": "Sarah Lee",
+    "creatorType": "Admin",
+    "status": "Active"
+  },
+  {
+    "ID": "5",
+    "name": "SEO Optimization Checklist",
+    "description": "Ensure your website is fully optimized for search engines.",
+    "creator": "John Doe",
+    "creatorType": "User",
+    "status": "Inactive"
+  },
+  {
+    "ID": "6",
+    "name": "Landing Page Design",
+    "description": "Design an optimized landing page for better conversion.",
+    "creator": "Rachel Adams",
+    "creatorType": "Admin",
+    "status": "Active"
+  },
+  {
+    "ID": "7",
+    "name": "Content Audit",
+    "description": "Review and improve your existing content to align with your strategy.",
+    "creator": "Sophia Clark",
+    "creatorType": "User",
+    "status": "Active"
+  },
+  {
+    "ID": "8",
+    "name": "Video Script Writing",
+    "description": "Write compelling scripts for your video content.",
+    "creator": "David Brown",
+    "creatorType": "User",
+    "status": "Draft"
+  }
+]
