@@ -12,6 +12,7 @@ const ViewTemplate = () => {
         { label: 'Creator Type', value: creatorType },
         { label: 'Status', value: <span className="status">{status}</span> },
     ];
+    console.log(ID, status, "Bhai Issue ki")
 
     return (
         <div>

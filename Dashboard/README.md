@@ -9,3 +9,7 @@ npm install react-toastify
 npm install react-toastify
 
 ```
+
+```bash
+npm install axios
+```
